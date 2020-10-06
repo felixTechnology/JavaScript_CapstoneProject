@@ -1,0 +1,138 @@
+car
+{color: "Red", speed: 200, drive: ƒ}
+    color: "Red"
+     drive: ƒ ()
+     speed: 200
+     __proto__: Object
+
+car.ma
+undefined
+
+car.make
+undefined
+
+car.color;
+"Red"
+
+autoRide
+{make: "volve", speed: 160, engine: {…}, drive: ƒ}
+
+autoRide.make
+"volve"
+
+autoRide.speed;
+160
+
+autoRide.engine.pistons
+(2) [{…}, {…}]
+   0: {maker: "BMW"}
+   1: {maker: "grannules"}
+   length: 2
+    __proto__: Array(0)
+
+autoRide.engine.pistons.[0]
+VM333:1 Uncaught SyntaxError: Unexpected token '['
+
+autoRide.engine.pistons.[0];
+VM341:1 Uncaught SyntaxError: Unexpected token '['
+
+autoRide.engine.pistons[0];
+{maker: "BMW"}
+
+array[0];
+"string"
+
+array[0];
+"string"
+
+function();
+VM448:1 Uncaught SyntaxError: Function statements require a function name
+array[4];
+ƒ (){
+    return "drive";
+    }
+array[4]();
+"drive"
+
+//Statement is a command or sentence given to JIT to execute
+undefined
+1+1=2;
+VM678:1 Uncaught SyntaxError: Invalid left-hand side in assignment
+
+1+1+1;
+3
+
+array[1+1-2];
+"string"
+
+//same as writting
+undefined
+
+array[0];
+"string"
+
+var a = 10;
+undefined
+a + 1 + 5;
+16
+
+a
+10
+array[a-5-2];
+{car: "ford"}
+car: "ford"
+__proto__: Object
+
+array[3];
+{car: "ford"}
+car: "ford"
+__proto__: Object
+
+car.nake;
+undefined
+car.ma
+undefined
+
+car.mak
+undefined
+
+car.make;
+undefined
+autoRide.make;
+"volve"
+
+autoRide["make"];
+"volve"
+
+autoRide["engine"]["pistons"];
+(2) [{…}, {…}]
+0: {maker: "BMW"}
+1: {maker: "grannules"}
+length: 2
+__proto__: Array(0)
+
+autoRide["engine"]["pistons"][1];
+{maker: "grannules"}maker: "grannules"__proto__: Object
+//subroutines
+undefined
+autoRide["drive"]();
+"drive"
+var pointer = "make";
+undefined
+autoRide[pointer];
+"volve"
+autoRide["make"];
+"volve"
+pointer ="speed";
+"speed"
+autoRide[pointer];
+       
+160
+car["en" +"gine"];
+undefined
+autoRide["en" + "gine"];
+{size: 2, make: "BMW", fuel: "petrol", pistons: Array(2)}fuel: "petrol"make: "BMW"pistons: (2) [{…}, {…}]size: 2__proto__: Object
+autoRide.engine;
+{size: 2, make: "BMW", fuel: "petrol", pistons: Array(2)}fuel: "petrol"make: "BMW"pistons: (2) [{…}, {…}]size: 2__proto__: Object
+autoRide["en" + "gine"];
+{size: 2, make: "BMW", fuel: "petrol", pistons: Array(2)}fuel: "petrol"make: "BMW"pistons: (2) [{…}, {…}]size: 2__proto__: Object
