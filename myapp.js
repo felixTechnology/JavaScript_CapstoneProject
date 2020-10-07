@@ -206,3 +206,191 @@ function printAge()
 
     return "John Doe";
 }
+
+/*********************************************************************/
+
+var engine = {
+    maker: "Ford",
+    headGasket:{
+        maker: "Golf",
+        pots:[
+            "piston1",
+            "piston2"
+        ]
+    }
+};
+/***********************************************************************************/
+
+function runExpression()
+{
+    var a = 10;
+
+    function add()
+    {
+        // Scoped engine
+        // var engine = "New engine";
+
+        // Inferred globals
+        console.log( engine, a );
+
+        // Clobbering the global scope
+        test = "new stirng";
+        test2 = "new string 2";
+        test3 = "new string 3";
+    }
+
+    add();
+}
+
+/********************************************************************************/
+//console.log( this );
+
+var object = {
+    prop: this,
+    embed:
+        {
+            method: function(){ return this; }
+        }
+};
+
+var arrayz = [
+    this,
+    function(){ return this; }
+];
+
+function global(){
+    return this;
+}
+
+// Normal invocation
+global();
+object.embed.method();
+arrayz[1]();
+
+// Assign context
+global.call( object );
+object.embed.method.call( object );
+arrayz[1].call( object );
+
+// New context
+new global();
+new object.embed.method( object );
+new arrayz[1]();
+
+/*****************************************************************************/
+
+function Apple( x, y, color, score )
+{
+    this.x = x;
+    this.y = y;
+    this.color = color;
+    this.score = score;
+}
+
+var apple1 = new Apple( 10, 20, "red", 200 );
+var apple2 = new Apple( 100, 200, "green", 50 );
+var apple3 = new Apple( 20, 200, "pink", 10 );
+
+
+/********************************************************************************************/
+
+var winMatch  = 1,
+    loseRight = 0,
+    ManchesterUnited  = "yes";
+
+//condition
+if( ManchesterUnited === "yes" )
+{
+    console.log( 'cross the road' );
+}
+//this section is opportunity to ask series of question assuming the 1st condition doesn't workout
+else if(
+    //false or True = True , false && true = false (Operator Precedence- developer.mozilla.org)
+    ManchesterUnited === "yes" && ( loseRight === 0 || winMatch === 0 )
+
+)
+{
+    console.log( 'All clear! Cross the road' );
+}
+else
+{
+    console.log( "Stay where you are!" );
+}
+
+/****************************************************************************************************/
+
+
+var classRegister = [ "Gordon", "Sharaf", "Kristine" ];
+
+/*for( var i = 0; i < classRegister.length; i++ )
+{
+    console.log( classRegister[ i ] );
+}*/
+//Decrementing and we starting point
+/*for( var i = classRegister.length - 1;   i >= 0;  i-- )
+{
+    console.log( classRegister[ i ] );
+}*/
+
+//in -> Is for incrementation
+for( var index in classRegister )
+{
+     console.log( classRegister[ index ] );
+}
+
+/**************************************************************************************************/
+var symbolName = "value reference in memory";
+
+//let create symbols that respect the scope that they reside in,particularly conditional executional context
+let letSymbol = "second value";
+
+const symName = "constant value in memory";
+
+/******************************************************************/
+
+/*
+
+//Example
+
+
+if (true){
+    //Variable don't respect conditional executional context
+    var symbolNames = "value reference in memory";
+
+//let create symbols that respect the scope that they reside in,particularly conditional executional context
+    let letSymbol = "second value";
+
+    //This also respect scope
+    const symName = "constant value in memory";
+}
+
+for (var i=0; i <5; i++){
+
+    //Variable don't respect conditional executional context
+    var symbolNamex = "value reference in memory";
+
+//let create symbols that respect the scope that they reside in,particularly conditional executional context
+    let letSymbol = "second value";
+
+    //This also respect scope
+    const symName = "constant value in memory";
+
+}
+
+for (let i=0; i <5; i++){
+
+    //Variable don't respect conditional executional context
+    var symbolNamez = "value reference in memory";
+
+//let create symbols that respect the scope that they reside in,particularly conditional executional context
+    let letSymbol = "second value";
+
+    //This also respect scope
+    const symName = "constant value in memory";
+
+}
+
+//Variable only respect only function that it forms it scope within.
+function check(){
+    var varSymbol = "assign a value";
+}*/
