@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="48e32232-748d-456d-834b-22601fa09bf5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="48e32232-748d-456d-834b-22601fa09bf5" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -59,10 +57,10 @@
     </configuration>
     <list>
       <item itemvalue="JavaScript Debug.exampleJsLoop.html" />
-      <item itemvalue="Node.js.Unnamed" />
-      <item itemvalue="Node.js.ExampleFunctionUdemy.js" />
-      <item itemvalue="Node.js.myapp.js" />
       <item itemvalue="JavaScript Debug.index.html" />
+      <item itemvalue="Node.js.ExampleFunctionUdemy.js" />
+      <item itemvalue="Node.js.Unnamed" />
+      <item itemvalue="Node.js.myapp.js" />
     </list>
     <recent_temporary>
       <list>
