@@ -44,10 +44,43 @@ var array = [
     {car: "ford"}, //object in array
     function (){
     return "drive";
-    }
+    },
+
+    "New Value"
 ]
 
 
 //Accessing member of the autoRide Object
 console.log(autoRide.make);
 console.log(autoRide.drive());
+
+/*
+function name(){
+    var fullName = "Felix Atsu Ackuayi";
+
+    function concat(name) {
+        return "Mr." + name;
+
+    }
+    return fullName;
+}*/
+
+
+function name(fullName) {
+    return fullName.firstname + fullName.lastname;
+}
+
+console.log(name({firstname: "Felix ", lastname: " Ackuayi"}));
+
+
+
+function fname(AllName) {
+
+    return AllName;
+
+
+}
+
+console.log (fname(function (){
+return "Embed";
+}));
