@@ -73,11 +73,50 @@ select.removeEventListener('click', ClickCallback)*/
 
 /***********************************************************************************/
 
+/*
 var element = document.createElement('div');
-element.style.cssText ="width:200px; height:200px; background:blue;";
+element.style.cssText ="width:200px; height:20px; background:blue;";
 
 element.onclick = function (){
     alert('hello');
 }
 
-document.body.appendChild(element);
+
+//document.body.appendChild(element);
+
+var target = document.getElementById('yellow');
+
+document.body.insertBefore(element, target)*/
+
+/*************************************************************************/
+let elements = document.getElementsByName('cssProperty');
+let div = document.getElementById('modify');
+
+function set(){
+
+
+    for (let index = 0; index < elements.length; index = index +1){
+
+       /* console.log(elements[index].getAttribute('id'));*/
+        let cssProperty =  elements[index].getAttribute('id');
+
+        /*console.log(elements[index].value);*/
+        let cssValue = elements[index].value;
+
+        //console.log(cssProperty,cssValue);
+
+      /*  let div = document.getElementById('modify');*/
+
+        div.style[cssProperty] = cssValue;
+    }
+}
+
+/*First of all the button has been targeted and an event Listener has been added so when you click on it
+* the said subroutine.
+* Then it a variable is created that stores the array of all the selected dropdowns which has it individual names called CSS property
+* The we iterate through the selected arrays to target each individual select dropdown
+* Then we look at each element with it ID attribute
+* then we get each value
+* then grab the div element
+*  */
+document.getElementById('set').addEventListener('click',set)
